@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 function ImagesGallery() {
-    const [image, setImage] = useState({ img: "", i: 0 });
+    const [image, setImage] = useState({ img: "", i: -1 });
     const [touchStartX, setTouchStartX] = useState(0);
     const [touchEndX, setTouchEndX] = useState(0); // Define touchEndX state
 
@@ -48,10 +48,13 @@ function ImagesGallery() {
             }
         };
 
-        window.addEventListener("keydown", handleKeyDown);
-        window.addEventListener("touchstart", handleTouchStart);
-        window.addEventListener("touchmove", handleTouchMove);
-        window.addEventListener("touchend", handleTouchEnd);
+        if (image.i > -1) {
+            window.addEventListener("keydown", handleKeyDown);
+            window.addEventListener("touchstart", handleTouchStart);
+            window.addEventListener("touchmove", handleTouchMove);
+            window.addEventListener("touchend", handleTouchEnd);
+        }
+
 
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
@@ -85,7 +88,7 @@ function ImagesGallery() {
             {image.img &&
                 <div className="w-[100%] z-20 after:z-[1] h-screen fixed top-0 left-0 after:bg-black after:h-screen after:w-screen after:absolute after:fixed after:top-0 after:left-0 overflow-hidden">
                     <div className="w-screen h-screen fixed z-50 flex justify-center items-center">
-                        <button onClick={() => setImage({ img: "", i: 0 })} className="absolute top-20 right-3 bg-orange-500 text-white p-1 rounded-full ml-5 w-8 h-8">x</button>
+                        <button onClick={() => setImage({ img: "", i: -1 })} className="absolute top-20 right-3 bg-orange-500 text-white p-1 rounded-full ml-5 w-8 h-8">x</button>
                         <button onClick={() => imgAction('prev')} className="bg-orange-500 text-white p-1 rounded-md  w-10 h-10 rounded-full"><FontAwesomeIcon icon={faArrowLeft} /></button>
                         <div className="w-[70%] max-w-[1000px] flex justify-center">
                             <img src={image.img} alt="" className="w-auto max-w-[90%] md:h-[70vh] " />
