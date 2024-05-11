@@ -1,4 +1,4 @@
-
+import Crew from "/src/assets/Crew.jpg";
 function GeneralServices() {
 
     return (
@@ -19,7 +19,7 @@ function GeneralServices() {
                     </span>
                 </div>
                 <div className="h-[100%] flex items-center w-[30%] min-w-[250px] mx-auto md:m-0 ">
-                    <img src="/src/assets/Crew.jpg" className="w-[250px] rounded-lg h-[175px] sm:w-[300px] sm:h-[200px] md:w-[100%] md:h-auto border-2 border-orange-500" alt="Services" />
+                    <img src={Crew} className="w-[250px] rounded-lg h-[175px] sm:w-[300px] sm:h-[200px] md:w-[100%] md:h-auto border-2 border-orange-500" alt="Services" />
                 </div>
 
             </div>
