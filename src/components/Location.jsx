@@ -3,7 +3,7 @@ const Location = () => {
   return (
     <div className="bg-white" id='location'>
       <div className="w-[100%] text-center pt-10">
-        <span className="font-capriola text-[30px] text-blue-900">Our  <span className='text-orange-500'>Location</span></span>
+        <span className="font-capriola text-[35px] text-blue-900">أين  <span className='text-orange-500'>تجدنا</span></span>
       </div>
       <div className="py-10 px-4 flex flex-wrap gap-6 md:gap-20 justify-evenly flex-col-reverse md:flex-row">
         <div className='border-4 rounded-xl border-orange-500 overflow-hidden w-450px max-w-[90vw] self-center'
@@ -21,9 +21,9 @@ const Location = () => {
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
-        <div className="text-blue-900 text-[40px] font-capriola "
+        <div className="text-blue-900 text-[30px]"
         // data-aos="zoom-in-up"
-        >Find us at <br />the heart of the city</div>
+        >يسعدنا ان نكون الأسرع  و الأكثر مصداقية <span className="hidden md:block"><br /></span> و الخيار الأمثل لدى عملاؤنا </div>
       </div>
     </div>
   )

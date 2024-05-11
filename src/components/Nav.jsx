@@ -8,11 +8,11 @@ const Nav = () => {
     const [openMenu, setOpenMenu] = useState(false)
 
     const links = [
-        { path: '/', text: 'Home' },
-        { path: '/aboutus', text: 'About Us' },
-        { path: '/contactus', text: 'Contact Us' },
-        { path: '/#', text: 'Services' },
-        { path: '/gallary', text: 'Gallary' }
+        { path: '/', text: 'الرئيسية' },
+        { path: '/aboutus', text: 'نبذه عنا' },
+        { path: '/contactus', text: 'تواصل معنا' },
+        { path: '/services', text: 'خدمات' },
+        { path: '/gallary', text: 'معرض الصور' }
     ];
 
     const completion = UseReadingProgress();
@@ -31,7 +31,7 @@ const Nav = () => {
 
     return (
         <header className='z-50 py-1 bg-white text-blue-900 w-[100vw] shadow-md fixed top-0'>
-            <nav className='flex justify-between items-center w-[92%] mx-auto'>
+            <nav className='flex justify-between flex-row-reverse items-center w-[92%] mx-auto'>
                 <Link to={"/"}>
                     <div className='font-capriola max-h-[60px] font-bold'>
                         <img alt='logo' src={logo} className='max-h-[60px] ' />
@@ -39,12 +39,15 @@ const Nav = () => {
                 </Link>
 
 
-                <div className={`absolute md:static duration-1000 bg-white min-h-[100vh] md:min-h-fit  ${openMenu === false ? 'left-[-100%]' : 'left-0'} top-[100%] right-0 w-[100vw] md:w-[60vw] flex justify-center px-5`}>
+                <div className={`absolute md:static duration-1000 bg-white min-h-[100vh] md:min-h-fit  ${openMenu === false ? 'right-[-100%]' : 'right-0'} top-[100%] right-0 w-[100vw] md:w-[60vw] flex justify-center px-5`}>
                     <ul className='flex md:flex-row flex-col w-[80vw] items-center justify-start md:justify-center md:items-center text-[25px] md:text-[18px] md:gap-[1vw] gap-8 pt-20 md:pt-0'>
 
                         {/* Map the links dynamically */}
                         {links.map((link, index) => (
-                            <Link key={index} to={link.path} className='w-[100%]' onClick={toggleMenu}>
+                            <Link key={index} to={link.path} className='w-[100%]' onClick={() => {
+                                toggleMenu(); // Close the menu when a link is clicked
+                                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top of the page
+                            }}>
                                 <div className='overflow-hidden w-[100%] h-[45.5px] md:h-fit relative md:static'>
                                     <li className={`${pathname === link.path ? activea : inactivea} text-nowrap duration-1000 absolute md:static top-0 z- ${openMenu === true ? "top-0" : "top-[100%]"}`}>
                                         {link.text}

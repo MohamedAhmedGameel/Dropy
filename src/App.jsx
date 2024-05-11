@@ -6,6 +6,9 @@ import Home from './pages/Home'
 import ContactUs from './pages/ContactUs'
 import Gallary from './pages/Gallary'
 import AboutUs from './pages/AboutUs'
+import 'tailwindcss/tailwind.css';
+import Services from './pages/Services'
+
 
 
 function App() {
@@ -19,6 +22,7 @@ function App() {
           <Route path="/contactus" element={<ContactUs />}></Route>
           <Route path="/gallary" element={<Gallary />}></Route>
           <Route path="/aboutus" element={<AboutUs />}></Route>
+          <Route path="/services" element={<Services />}></Route>
           {/* <Route path="/login" element={<LoginPage />}></Route>
           <Route path="/signup" element={<RegistrationForm />}></Route> */}
         </Routes>

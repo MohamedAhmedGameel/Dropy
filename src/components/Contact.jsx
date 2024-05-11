@@ -47,11 +47,11 @@ function Contact() {
   return (
     <div className="h-fit bg-gray-200 flex gap-10 pt-5 pb-5 flex-col items-center" id="messages">
       <div className="w-[100%] text-center pt-10">
-        <span className="font-capriola text-[30px] text-blue-900">Contact  <span className='text-orange-500'>Us</span></span>
+        <span className="font-capriola text-[35px] text-blue-900">تواصل  <span className='text-orange-500'>معنا</span></span>
       </div>
       <div className="flex w-screen justify-evenly flex-wrap px-4 py-5 gap-10">
-        <div className="text-blue-900 text-[40px] gap-0 font-capriola h-[100%] flex flex-col justify-between items-center">
-          <span>Alternatively please use the response form to contact us.</span>
+        <div className="text-blue-900  text-[30px] gap-0 font-capriola h-[100%] flex flex-col justify-between items-center">
+          <span>إستمرار دروبي للنقليات في التميز هي أولويتنا دائماَ</span>
         </div>
         <div className="box rounded overflow-hidden w-80 max-w-full flex items-center justify-center relative after:w-[170px] bg-white after:h-[200%] after:bg-blue-600 after:absolute z-10 after:z-[-1]">
           <form ref={form} onSubmit={formik.handleSubmit} className="bg-white p-6 rounded shadow-md w-[99%] h-[99%]">

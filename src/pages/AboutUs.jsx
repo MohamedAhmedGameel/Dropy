@@ -1,3 +1,4 @@
+import About from "../components/About"
 import ContactInfo from "../components/ContactInfo"
 import SubLanding from "../components/SubLanding"
 
@@ -6,6 +7,7 @@ function AboutUs() {
         <div>
             <SubLanding />
             <ContactInfo />
+            <About />
         </div>
     )
 }

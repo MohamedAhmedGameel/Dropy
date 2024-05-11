@@ -16,7 +16,7 @@ const Counter = () => {
             <div className='min-h-[70vh] sm:min-h-[450px] md:max-h-[400px] max-h-fit width-screen inline-flex flex-col items-center gap-16
              overflow-hidden' id='counter'>
                 <div className="w-[100%] text-center pt-10">
-                    <span className="font-capriola text-[30px] text-blue-900">Our  <span className='text-orange-500'>Numbers</span></span>
+                    <span className="font-capriola text-[35px] text-blue-900">بعض  <span className='text-orange-500'>الأحصائيات</span></span>
                 </div>
                 <div className='flex justify-evenly min-h-[70%] h-fit items-center w-screen flex-wrap'>
 
@@ -25,7 +25,7 @@ const Counter = () => {
                             <span >{counterOn && <CountUp start={0} end={21} duration={4} delay={1} />}</span>
                         </div>
                         <div className={cardDesc}>
-                            <p><strong>Branches</strong></p>
+                            <p><strong>فروع</strong></p>
                         </div>
                     </div>
 
@@ -35,7 +35,7 @@ const Counter = () => {
                             <span>{counterOn && <CountUp start={0} end={600} duration={2} delay={1} />} +</span>
                         </div>
                         <div className={cardDesc}>
-                            <p><strong>Happy Clients</strong></p>
+                            <p><strong>عملاء سعداء</strong></p>
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@ const Counter = () => {
                             <span>{counterOn && <CountUp start={0} end={900} duration={3} delay={1} />}K +</span>
                         </div>
                         <div className={cardDesc}>
-                            <p><strong>Monthly Shipments</strong></p>
+                            <p><strong>شحنات شهريه</strong></p>
                         </div>
                     </div>
 
