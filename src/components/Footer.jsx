@@ -1,5 +1,5 @@
 // import React from 'react';
-import { faEnvelope, faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone, faLocationDot, faMobileScreenButton } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Icon from "./Icon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,13 +20,19 @@ const Footer = () => {
               <i className="absolute text-[20px] right-[-30px] text-orange-500 ">
                 <FontAwesomeIcon icon={faEnvelope} />
               </i>
-              <p className="text-[16px]">book.shop@gmail.com</p>
+              <p className="text-[16px]">support@dropyksa.com</p>
+            </div>
+            <div className=" relative mb-6 sm:pl-[15px] w-[200px]" >
+              <i className="absolute text-[20px] right-[-30px] text-orange-500 ">
+                <FontAwesomeIcon icon={faMobileScreenButton} />
+              </i>
+              <p className="text-[16px] text-right" dir="ltr">0531010060</p>
             </div>
             <div className=" relative mb-6 sm:pl-[15px] w-[200px]" >
               <i className="absolute text-[20px] right-[-30px] text-orange-500 ">
                 <FontAwesomeIcon icon={faPhone} />
               </i>
-              <p className="text-[16px] text-right" dir="ltr">0531010060</p>
+              <p className="text-[16px] text-right" dir="ltr">0112399558</p>
             </div>
             <div className=" relative sm:pl-[15px] w-[200px]">
               <i className="absolute text-[20px] right-[-30px] text-orange-500 ">

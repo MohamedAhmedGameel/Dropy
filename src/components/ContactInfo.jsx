@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faMobileScreenButton } from "@fortawesome/free-solid-svg-icons";
 
 function ContactInfo() {
     const contactInfo = [
-        { icon: faEnvelope, text: "book.shop@gmail.com" },
-        { icon: faPhone, text: "0531010060" }
+        { icon: faEnvelope, text: "support@dropyksa.com" },
+        { icon: faMobileScreenButton, text: "0531010060" }
     ];
 
     return (

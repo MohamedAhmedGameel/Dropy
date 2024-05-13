@@ -22,29 +22,29 @@ const Counter = () => {
 
                     <div className={card}>
                         <div className={cardNumber}>
-                            <span >{counterOn && <CountUp start={0} end={21} duration={4} delay={1} />}</span>
+                            <span >{counterOn && <CountUp start={0} end={1108} duration={4} delay={1} />}</span>
                         </div>
                         <div className={cardDesc}>
-                            <p><strong>فروع</strong></p>
+                            <p><strong>عملاء الحاليين</strong></p>
                         </div>
                     </div>
 
 
                     <div className={card}>
                         <div className={cardNumber}>
-                            <span>{counterOn && <CountUp start={0} end={600} duration={2} delay={1} />} +</span>
+                            <span>{counterOn && <CountUp start={0} end={14} duration={4} delay={1} />} </span>
                         </div>
                         <div className={cardDesc}>
-                            <p><strong>عملاء سعداء</strong></p>
+                            <p><strong>السائقين فى الخدمه</strong></p>
                         </div>
                     </div>
 
                     <div className={card}>
                         <div className={cardNumber}>
-                            <span>{counterOn && <CountUp start={0} end={900} duration={3} delay={1} />}K +</span>
+                            <span>{counterOn && <CountUp start={0} end={49} duration={4} delay={1} />}</span>
                         </div>
                         <div className={cardDesc}>
-                            <p><strong>شحنات شهريه</strong></p>
+                            <p><strong>السيارات فى الخدمه</strong></p>
                         </div>
                     </div>
 
