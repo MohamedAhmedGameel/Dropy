@@ -1,9 +1,10 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 
 function Contact() {
+  const [showPopup, setShowPopup] = useState(false);
   const form = useRef();
 
   const sendEmail = (values, e) => {
@@ -18,6 +19,8 @@ function Contact() {
     }, 'MCXYN1narHDCj_5dp')
       .then((response) => {
         console.log('Email sent successfully:', response.status, response.text);
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 3000);
         form.current.reset();
       })
       .catch((error) => {
@@ -120,6 +123,9 @@ function Contact() {
             </button>
           </form>
         </div>
+      </div>
+      <div className={`fixed top-20 right-0 left-0 w-[100vw] flex justify-center duration-500 z-[51] ${showPopup === true ? "top-20" : "top-[-100%]"}`}>
+        <p className='bg-orange-500 text-white w-fit px-4 py-2 rounded-lg'>شكرا على تواصلكم٫سنعاود الرد في خلال وقت قصير</p>
       </div>
     </div>
   );
