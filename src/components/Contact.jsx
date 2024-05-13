@@ -116,7 +116,7 @@ function Contact() {
               type="submit"
               className="w-full bg-blue-600 text-white py-2 rounded hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 duration-1000"
             >
-              Submit
+              إرسال
             </button>
           </form>
         </div>
