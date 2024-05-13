@@ -32,11 +32,11 @@ function Contact() {
       message: '',
     },
     validationSchema: Yup.object({
-      customer: Yup.string().required('Full Name is required'),
+      customer: Yup.string().required('يجب إدخال الأسم'),
       email: Yup.string()
-        .email('Invalid email address')
-        .required('Email is required'),
-      message: Yup.string().required('message is required'),
+        .email('الرجاء ادخال البريد الإلكترونى بشكل صحيح')
+        .required('يجب إدخال البريد الإلكترونى'),
+      message: Yup.string().required('يجب ادخال الرساله'),
     }),
     onSubmit: (values, { resetForm }) => {
       sendEmail(values, event);
