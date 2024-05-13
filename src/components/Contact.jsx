@@ -57,13 +57,13 @@ function Contact() {
           <form ref={form} onSubmit={formik.handleSubmit} className="bg-white p-6 rounded shadow-md w-[99%] h-[99%]">
             <div className="mb-4">
               <label htmlFor="customer" className="block text-sm font-medium text-gray-700">
-                Name Surname
+                الأسم
               </label>
               <input
                 id="customer"
                 name="customer"
                 type="text"
-                placeholder="Full Name"
+                placeholder="الأسم"
                 className={`block w-full mt-1 p-3 rounded border ${formik.errors.customer && formik.touched.customer ? 'border-red-500' : 'border-gray-300'
                   } focus:outline-none focus:ring focus:ring-blue-300`}
                 onChange={formik.handleChange}
@@ -76,13 +76,13 @@ function Contact() {
             </div>
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
+                البريد الإلكترونى
               </label>
               <input
                 id="email"
                 name="email"
                 type="text"
-                placeholder="Phone Number"
+                placeholder="البريد الإلكترونى"
                 className={`block w-full mt-1 p-3 rounded border ${formik.errors.email && formik.touched.email ? 'border-red-500' : 'border-gray-300'
                   } focus:outline-none focus:ring focus:ring-blue-300`}
                 onChange={formik.handleChange}
@@ -95,13 +95,13 @@ function Contact() {
             </div>
             <div className="mb-4">
               <label htmlFor="text" className="block text-sm font-medium text-gray-700">
-                Message
+                الرساله
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={5}
-                placeholder="Your message"
+                placeholder="الرساله"
                 className={`block w-full mt-1 p-3 rounded border ${formik.errors.message && formik.touched.message ? 'border-red-500' : 'border-gray-300'
                   } focus:outline-none focus:ring focus:ring-blue-300`}
                 onChange={formik.handleChange}
